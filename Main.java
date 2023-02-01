@@ -1,30 +1,37 @@
+import java.util.Arrays;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         
-        // month와 day 입력받기
-        int month = scan.nextInt();
-        int day = scan.nextInt();
-
-        // 1월~11월의 해당 일 수와 요일 변수 선언
-        int[] cal = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
-        String days[] = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
-
-        
+        int dwarf[] = new int[9];
         int total = 0;
-
-        // 입력받은 month보다 작은 월의 총 일 수를 더하기
-        for(int i=0;i<month;i++) {
-            total += cal[i];
+        
+        // 아홉 난쟁이의 키 입력
+        for(int i=0;i<dwarf.length;i++) {
+            dwarf[i] = scan.nextInt();
+            total += dwarf[i];
         }
-
-        // 입력받은 day를 더해주기
-        total += day-1;
-
-        // 해당 요일 출력
-        System.out.println(days[total%7]);
-
         scan.close();
+        
+        // 아홉 난쟁이의 키를 오름차순으로 정렬
+        for(int i=0;i<dwarf.length;i++) 
+            for(int j=i+1;j<dwarf.length;j++) {
+
+                // 두 난쟁이를 재외한 나머지 난쟁이의 키의 합이 100일 때
+                if(total-dwarf[i]-dwarf[j] == 100) { 
+                    dwarf[i] = 0;
+                    dwarf[j] = 0;
+                    Arrays.sort(dwarf);
+                    
+                    // 출력
+                    for(int k=2;k<dwarf.length;k++)
+                        System.out.println(dwarf[k]);
+
+                    return;
+                }
+            }
+
     }
 }
