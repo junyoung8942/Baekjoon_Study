@@ -20,7 +20,7 @@ public class p4344 {
 			}
 			
 			double mean = (double)(sum / student_cnt) ;
-			double count = 0; // 평균을 넘는 학생 수
+			double count = 0;  // 평균을 넘는 학생 수
 			
 			// 평균을 넘는 학생 찾기 
 			for(int j = 0 ; j < student_cnt ; j++) {
