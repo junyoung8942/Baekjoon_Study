@@ -10,7 +10,7 @@ public class p2775 {
             apt[i][1] = 1;  // i층 1호
         }
 
-        for(int i=1;i<apt.length;i++) { // 1층부터 14층까지
+        for(int i=1;i<apt.length;i++) {  // 1층부터 14층까지
             for(int j=2;j<apt[i].length;j++) { // 2호부터 14호까지
                 apt[i][j] = apt[i-1][j] + apt[i][j-1];
             }
