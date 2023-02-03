@@ -1,7 +1,7 @@
 package Broze1;
 
 import java.util.Scanner;
-
+ 
 public class p8595 {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
