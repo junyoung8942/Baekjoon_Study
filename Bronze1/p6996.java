@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class p6996 {
 
     private static boolean solveAnagrams(String first, String second ) {
-        if(first.length()!=second.length()) // 문자열 길이가 다를시
+        if(first.length()!=second.length())  // 문자열 길이가 다를시
             return false;
         
         int alphabet[] = new int[26]; // 알파벳 개수만큼 생성
