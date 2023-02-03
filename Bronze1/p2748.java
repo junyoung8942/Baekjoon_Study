@@ -11,7 +11,7 @@ public class p2748 {
         long num1 = 0;
         long num2 = 1;
     
-        // n번째 피보나치 수 구하기
+        // n번째 수 구하기
         for(int i=1;i<n;i++) {
             output = num1 + num2;
             num1 = num2;
