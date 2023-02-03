@@ -25,7 +25,7 @@ public class p4796 {
             while(true) {
                 V = V - P;
                 total += L;
-                if(V < P) { // 남은 휴가 일 수가 연속하는 일보다 작을 때
+                if(V < P) {  // 남은 휴가 일 수가 연속하는 일보다 작을 때
 
                     if(V > L) { // 휴가의 남은 일 수가 사용가능일보다 클 때
                         total += L;
